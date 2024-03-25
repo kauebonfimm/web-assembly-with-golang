@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gerador de senha</title>
+    <script src="/assets/wasm_exec.js"></script>
+    <script src="/assets/script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Gerador de senha com web assembly</h1>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Como funciona?</h2>
+            <p>Este gerador de senha utiliza web assembly para gerar uma senha aleatória. O código que gera a senha é escrita em golang e compilado para web assembly.</p>
+        </section>
+        <section>
+            <h2>Gerar senha</h2>
+            <div>
+                <label for="length">Tamanho da senha:</label>
+                <input type="number" id="length" value="16">
+            </div>
+            <div>
+                <label for="letters">Incluir letras:</label>
+                <input type="checkbox" id="letters" checked>
+            </div>
+            <div>
+                <label for="numbers">Incluir números:</label>
+                <input type="checkbox" id="numbers" checked>
+            </div>
+            <div>
+                <label for="symbols">Incluir símbolos:</label>
+                <input type="checkbox" id="symbols" checked>
+            </div>
+            <div>
+                <label for="ignoreCaracters">Excluir caracteres</label>
+                <input type="text" id="ignoreCaracters">
+            </div>
+            <button onclick="generatePassword()">Gerar senha</button>
+            <div>
+                <label for="password">Senha:</label>
+                <span id="password"></span>
+            </div>
+    </main>
+    
+</body>
+</html>
